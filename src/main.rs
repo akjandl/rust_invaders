@@ -8,7 +8,7 @@ const TIME_STEP: f32 = 1.0 / 60.0;
 
 // Entity, Component, System, Resource
 
-// resources
+// START Resources
 pub struct Materials {
     player_materials: Handle<ColorMaterial>,
     laser: Handle<ColorMaterial>,
@@ -17,9 +17,9 @@ struct WinSize {
     w: f32,
     h: f32,
 }
-// END resources
+// END Resources
 
-// components
+// START Components
 struct Player;
 struct PlayerReadyFire(bool);
 struct Laser;
@@ -29,7 +29,7 @@ impl Default for Speed {
         Self(500.0)
     }
 }
-// END components
+// END Components
 
 fn main() {
     App::build()
